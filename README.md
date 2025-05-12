@@ -6,7 +6,7 @@
 
 [[Website]](https://lecar-lab.github.io/falcon-humanoid/)
 [[Arxiv]](https://lecar-lab.github.io/falcon-humanoid/)
-[[Video]](https://lecar-lab.github.io/falcon-humanoid/)
+[[Video]](https://www.youtube.com/watch?v=OfsvJ5-Fyzg)
 
 <img src="assets/ip.png" style="height:100px;" />
 
@@ -16,7 +16,7 @@
 [![IsaacGym](https://img.shields.io/badge/IsaacGym-Preview4-b.svg)](https://developer.nvidia.com/isaac-gym) [![Linux platform](https://img.shields.io/badge/Platform-linux--64-orange.svg)](https://ubuntu.com/blog/tag/22-04-lts) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 
 
-<img src="assets/tug_of_war.gif" width="550px"/>
+<img src="assets/hero_static.gif" width="550px"/>
 
 </div>
 
@@ -29,11 +29,7 @@
 If you find our work useful, please consider citing us!
 
 ```bibtex
-@article{zhang2025FALCON,
-  title={Zhang, Yuanhang and Yuan, Yifu and Gurunath, Prajwal and He, Tairan and Omidshafiei, Shayegan and Agha-mohammadi, Ali-akbar and Vazquez-Chanlatte, Marcell and Pedersen, Liam and Shi, Guanya},
-  journal={arXiv preprint arXiv:2502.01143},
-  year={2025}
-}
+@article{TODO}
 ```
 
 # License

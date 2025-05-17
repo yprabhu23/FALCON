@@ -71,10 +71,12 @@ For libpython error:
     export LD_LIBRARY_PATH=</path/to/conda/envs/your_env/lib>:$LD_LIBRARY_PATH
     ```
 
-### Install HumanoidVerse
+### Install FALCON
 
-Install dependencies:
 ```bash
+git clone https://github.com/LeCAR-Lab/FALCON.git
+cd FALCON
+
 pip install -e .
 pip install -e isaac_utils
 ```

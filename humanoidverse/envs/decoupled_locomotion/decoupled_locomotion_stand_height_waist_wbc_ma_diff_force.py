@@ -629,6 +629,23 @@ class LeggedRobotDecoupledLocomotionStanceHeightWBCForce(LeggedRobotDecoupledLoc
         base_height_error = torch.abs(self.commands[:, 8] - self.simulator.robot_root_states[:, 2]) * (1 - torch.clip(total_apply_force / 50, 0, 1))
         return torch.exp(-base_height_error/self.config.rewards.reward_tracking_sigma.base_height) * self.commands[:, 4]
     
+    def _reward_tracking_base_height(self):
+        # Tracking of base height commands (z axe)
+        base_height_error = torch.abs(self.commands[:, 8] - self.simulator.robot_root_states[:, 2])
+        # total_apply_force = torch.norm(self.apply_force_tensor[:, self.left_hand_link_index, :] + self.apply_force_tensor[:, self.right_hand_link_index, :], dim=1)
+        # base_height_error = base_height_error * (1 - self.commands[:, 4] + self.commands[:, 4] * (1 - torch.clip(total_apply_force / 50, 0, 1)))
+        return torch.exp(-base_height_error/self.config.rewards.reward_tracking_sigma.base_height)
+    
+    def _reward_base_height(self):
+        # Penalize base height away from target
+        base_height = self.simulator.robot_root_states[:, 2]
+        # return torch.square(base_height - self.config.rewards.desired_base_height)*self.commands[:, 4] # only apply the base height penalty if locomoting
+        penalty_base_height = torch.square(base_height - self.commands[:, 8]) # only apply the base height penalty if standing
+        stance_env_idx = torch.where(self.commands[:, 4] < 1)[0]
+        penalty_base_height[stance_env_idx] *= self.stance_base_height_penalty_scale # double the penalty if standing
+        # print(f"base_height: {base_height}, penalty_base_height: {penalty_base_height}")
+        return penalty_base_height
+
     def _reward_penalty_ankle_roll(self):
         # Compute the penalty for ankle roll
         left_ankle_roll = self.simulator.dof_pos[:, self.left_ankle_dof_indices[1:2]]

@@ -52,7 +52,7 @@ env:
     max_force_estimation: True
     update_apply_force_phase: True
     use_lpf: True
-    force_filter_alpha: 0.1
+    force_filter_alpha: 0.05
     zero_tapping_xy_force: False
     zero_force_prob: [0.25, 0.25, 0.25] # 0.2
     random_force_prob: 0.0

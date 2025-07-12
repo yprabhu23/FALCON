@@ -218,10 +218,6 @@ Other work also using FALCON's dual-agent framework:
 ```bibtex
 @article{li2025softa,
           title={Hold My Beer: Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control},
-
-https://github.com/user-attachments/assets/784b8f9c-952a-4d66-b8a2-d20809a01584
-
-
           author={Li, Yitang and Zhang, Yuanhang and Xiao, Wenli and Pan, Chaoyi and Weng, Haoyang and He, Guanqi and He, Tairan and Shi, Guanya},
           journal={arXiv preprint arXiv:2505.24198},
           year={2025}

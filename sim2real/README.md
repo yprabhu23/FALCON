@@ -50,8 +50,8 @@ JOYSTICK_TYPE: "xbox" # support "xbox" and "switch" gamepad layout; Unitree Wire
 
 ## Create a conda env
 ```
-conda create -n hvreal python=3.10
-conda activate hvreal
+conda create -n fcreal python=3.10
+conda activate fcreal
 ```
 ## Install Pinocchio for Inverse Kinematics
 ```
@@ -87,6 +87,7 @@ pip install -r requirements.txt
 > [!IMPORTANT]
 > For sim2sim, you need to start Mujoco and then launch the policy, but for sim2real, you **only** need to launch the policy.
 > Make sure you read the keyboard and joystick control protocol in `sim2real/rl_policy/base_policy.py`.
+> All the deployment scripts are running under `sim2real`, so do `cd sim2real` first.
 
 <details>
 <summary>TEST with G1_29DoF Locomotion</summary>

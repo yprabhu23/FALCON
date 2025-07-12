@@ -191,6 +191,17 @@ If you find our work useful, please consider citing us!
         }
 ```
 
+Other work also using dual-agent framework:
+
+```bibtex
+@article{li2025softa,
+          title={Hold My Beer: Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control},
+          author={Li, Yitang and Zhang, Yuanhang and Xiao, Wenli and Pan, Chaoyi and Weng, Haoyang and He, Guanqi and He, Tairan and Shi, Guanya},
+          journal={arXiv preprint arXiv:2505.24198},
+          year={2025}
+        }
+```
+
 # Acknowledgement
 **FALCON** is built upon [ASAP](https://github.com/LeCAR-Lab/ASAP) and [HumanoidVerse](https://github.com/LeCAR-Lab/HumanoidVerse).
 

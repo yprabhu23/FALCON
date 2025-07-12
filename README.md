@@ -198,7 +198,7 @@ We provide seamless sim2sim and sim2real deployment scripts supporting both [uni
 ## Large Workspace
 FALCON can be easily extended to larger workspace by setting larger torso command range and base height command range. We provide the sim2sim result of Unitree G1 with larger command range as an example:
 
-[falcon_ext.webm](https://github.com/user-attachments/assets/da5e6209-89cf-4cbd-b4ef-33ab345074d2)
+https://github.com/user-attachments/assets/2d92000e-b990-45aa-a4ad-032fe0158eba
 
 
 # Citation
@@ -218,6 +218,10 @@ Other work also using FALCON's dual-agent framework:
 ```bibtex
 @article{li2025softa,
           title={Hold My Beer: Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control},
+
+https://github.com/user-attachments/assets/784b8f9c-952a-4d66-b8a2-d20809a01584
+
+
           author={Li, Yitang and Zhang, Yuanhang and Xiao, Wenli and Pan, Chaoyi and Weng, Haoyang and He, Guanqi and He, Tairan and Shi, Guanya},
           journal={arXiv preprint arXiv:2505.24198},
           year={2025}

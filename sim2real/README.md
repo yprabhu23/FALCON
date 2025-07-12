@@ -130,8 +130,7 @@ python rl_policy/loco_manip/loco_manip.py \
 --model_path=models/falcon/g1_29dof.onnx 
 ```
 
-[falcon_g1.webm](https://github.com/user-attachments/assets/cf915b58-e25c-458b-83ea-8822c2f2c85d)
-
+https://github.com/user-attachments/assets/273b52c1-0248-40e5-b218-e078e74b322d
 
 ## T1 29DoF FALCON
 ### 1. Start Mujoco Env (ONLY for Sim2Sim)
@@ -146,6 +145,7 @@ python rl_policy/loco_manip/loco_manip.py \
 --model_path=models/falcon/t1_29dof.onnx
 ```
 
+https://github.com/user-attachments/assets/e35ff90e-428b-41ea-8cac-64d9906c78e8
 
 ## Sim2Real Tips
 > [!CAUTION]

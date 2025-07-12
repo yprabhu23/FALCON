@@ -24,7 +24,7 @@ domain_rand:
 
   # friction
   randomize_friction : True
-  friction_range : [0.5, 1.25] # [0.1, 1.0]
+  friction_range : [0.25, 1.25] # [0.1, 1.0]
 
   # base mass
   randomize_base_mass : True

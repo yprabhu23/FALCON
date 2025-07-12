@@ -97,12 +97,12 @@ class PPOMultiActorCritic(PPO):
             self.actor_optimizers[key] = optim.AdamW(
                 self.actors[key].parameters(), 
                 lr=self.actor_learning_rates[key],
-                weight_decay=0.01,  # L2 regularization
+                weight_decay=self.config.get('weight_decay', 0.01),  # L2 regularization
             )
             self.critic_optimizers[key] = optim.AdamW(
                 self.critics[key].parameters(), 
                 lr=self.critic_learning_rates[key],
-                weight_decay=0.01,  # L2 regularization
+                weight_decay=self.config.get('weight_decay', 0.01),  # L2 regularization
             )
 
     def _setup_storage(self):

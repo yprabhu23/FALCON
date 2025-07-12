@@ -13,9 +13,11 @@ This folder provides seamless sim2sim/sim2real deployment scripts for both Unitr
 ## Table of Contents
 
 - [Pre-Configuration](#pre-configuration)
-- [G1 29DoF Locomotion](#g1-29dof-locomotion)
-- [G1 29DoF FALCON](#g1-29dof-falcon)
-- [T1 29DoF FALCON](#t1-29dof-falcon)
+- [Installation](#installation)
+- [Deployment](#deployment)
+  - [G1 29DoF Locomotion](#g1-29dof-locomotion)
+  - [G1 29DoF FALCON](#g1-29dof-falcon)
+  - [T1 29DoF FALCON](#t1-29dof-falcon)
 - [Sim2Real Tips](#sim2real-tips)
 
 ## Pre-Configuration
@@ -89,7 +91,7 @@ pip install -r requirements.txt
 <details>
 <summary>TEST with G1_29DoF Locomotion</summary>
 
-## G1_29DoF Locomotion
+## G1 29DoF Locomotion
   
 Here, we fix the upper body target joint angles to the default, and the policy only outputs the lower body action.
 ### 1. Start Mujoco Env (ONLY for Sim2Sim)
@@ -111,7 +113,7 @@ https://github.com/user-attachments/assets/dc2d8821-6361-49a8-93cd-fb443bd63c39
 
 </details>
 
-## G1_29DoF FALCON
+## G1 29DoF FALCON
 
 ### 1. Start Mujoco Env (ONLY for Sim2Sim)
 
@@ -131,7 +133,7 @@ python rl_policy/loco_manip/loco_manip.py \
 [falcon_g1.webm](https://github.com/user-attachments/assets/cf915b58-e25c-458b-83ea-8822c2f2c85d)
 
 
-## T1_29DoF FALCON
+## T1 29DoF FALCON
 ### 1. Start Mujoco Env (ONLY for Sim2Sim)
 ```bash
 python sim_env/loco_manip.py \

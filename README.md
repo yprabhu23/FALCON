@@ -22,8 +22,8 @@
 
 ## TODO
 - [x] Release training code
-- [ ] Release sim2sim code
-- [ ] Release sim2real code
+- [x] Release sim2sim code
+- [x] Release sim2real code
 
 
 # Installation
@@ -80,6 +80,9 @@ cd FALCON
 pip install -e .
 pip install -e isaac_utils
 ```
+
+# Motion Retargetting
+Please refer to [PHC](https://github.com/ZhengyiLuo/PHC).
 
 # FALCON Training
 ## Unitree G1_29DoF
@@ -179,6 +182,25 @@ After around `6k` iterations, in `IsaacGym`:
   </tr>
 </table>
 
+# FALCON Deploy
+We provide seamless sim2sim and sim2real deployment scripts supporting both [unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) and [booster_robotics_sdk](https://github.com/hang0610/booster_robotics_sdk). Please refer to this [README](sim2real/README.md) for details.
+
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <img src="assets/deploy.png" style="width: 99%;"/>
+    </td>
+  </tr>
+</table>
+
+# FALCON Extension
+
+## Large Workspace
+FALCON can be easily extended to larger workspace by setting larger torso command range and base height command range. We provide the sim2sim result of Unitree G1 with larger command range as an example:
+
+[falcon_ext.webm](https://github.com/user-attachments/assets/da5e6209-89cf-4cbd-b4ef-33ab345074d2)
+
+
 # Citation
 If you find our work useful, please consider citing us!
 
@@ -191,7 +213,7 @@ If you find our work useful, please consider citing us!
         }
 ```
 
-Other work also using dual-agent framework:
+Other work also using FALCON's dual-agent framework:
 
 ```bibtex
 @article{li2025softa,

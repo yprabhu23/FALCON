@@ -186,8 +186,6 @@ class LocoManipPolicy(DecLocomotionPolicy):
         super().handle_joystick_button(cur_key)
         if cur_key in ["B+up", "B+down"]:
             self._handle_joystick_base_height_control(cur_key)
-        elif cur_key == "R2":
-            self._handle_stand_command()
         if cur_key == "Y+up":
             self.waist_dofs_command[:, 2] -= 0.1
             self.logger.info(colored(f"waist pitch: {self.waist_dofs_command[:, 2]}", "green"))
@@ -273,9 +271,16 @@ class LocoManipPolicy(DecLocomotionPolicy):
     def _handle_base_height_control(self, keycode):
         """Handle base height control."""
         if keycode == "1":
-            self.base_height_command[0, 0] += 0.05
+            self.base_height_command[0, 0] += 0.1
         elif keycode == "2":
-            self.base_height_command[0, 0] -= 0.05
+            self.base_height_command[0, 0] -= 0.1
+
+    def _handle_joystick_base_height_control(self, cur_key):
+        """Handle joystick base height control."""
+        if cur_key == "B+up":
+            self.base_height_command[0, 0] += 0.1
+        elif cur_key == "B+down":
+            self.base_height_command[0, 0] -= 0.1
 
     def _print_control_status(self):
         """Print current control status."""

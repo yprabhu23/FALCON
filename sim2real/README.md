@@ -201,6 +201,12 @@ https://github.com/user-attachments/assets/e35ff90e-428b-41ea-8cac-64d9906c78e8
 - **Keyboard**: Press 'o' to stop policy actions
 - **Joystick**: Press 'B+Y' to stop policy actions
 
+### Real-time Inference
+- `unitree_sdk2_python` can not guarantee real-time inference on Jetson Orin inside of Unitree G1 as `unitree_sdk2_python` is fully written in python, while `booster_robotics_sdk` works fine as its backend is written in cpp with a pybinding wrapper.
+- It's recommended to use `unitree_sdk2` for real-time onboard inference on Unitree G1. Please check this [repo](https://github.com/hang0610/unitree_sdk2/tree/main) for the pybinding wrapper I wrote for `unitree_sdk2`.
+
+I recommend you to use `unitree_sdk2` for real-time inference onboard. I have written a pybinding wrapper for it. Please check this [repo](https://github.com/hang0610/unitree_sdk2) (currently no README for this pybinding wrapper, but will update soon).
+
 # Acknowledgement
 We thank the following open-sourced repos that we build upon:
 - [unitree_mujoco](https://github.com/unitreerobotics/unitree_mujoco)

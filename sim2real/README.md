@@ -114,6 +114,41 @@ https://github.com/user-attachments/assets/dc2d8821-6361-49a8-93cd-fb443bd63c39
 
 </details>
 
+Here are some **keyboard shortcuts**:
+
+<details>
+<summary>Keyboard Shortcuts in Mujoco</summary>
+
+- `7`: raise elastic band height
+- `8`: lower elastic band height
+- `9`: toggle elastic band
+- `backspace`: reset simulation
+
+</details>
+
+<details>
+<summary>Keyboard Shortcuts in Policy Terminal</summary>
+
+- `]`: start using policy actions
+- `o`: stop using policy action and set actions to zero
+- `=`: switch between standing and stepping
+- `w`: increase linear velocity in `x` direction
+- `s`: decrease linear velocity in `x` direction
+- `a`: increase linear velocity in `y` direction
+- `d`: decrease linear velocity in `y` direction
+- `q`: decrease angular velocity in `z` direction
+- `e`: increase angular velocity in `z` direction
+- `z`: set velocity to zero
+- `1`: increase base height (if the policy allows)
+- `2`: decrease base height (if the policy allows)
+- `5`: decrease kp scale by 0.01
+- `6`: increase kp scale by 0.01
+- `4`: decrease kp scale by 0.1
+- `7`: increase kp scale by 0.1
+- `0`: reset kp scale to 1.0
+  
+</details>
+
 ## G1 29DoF FALCON
 
 ### 1. Start Mujoco Env (ONLY for Sim2Sim)

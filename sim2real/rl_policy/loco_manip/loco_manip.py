@@ -96,25 +96,6 @@ class LocoManipPolicy(DecLocomotionPolicy):
 
         return scaled_policy_action
 
-    def prepare_obs_for_rl(self, robot_state_data):
-        current_obs_buffer_dict = self.get_current_obs_buffer_dict(robot_state_data)
-        current_obs_dict = self.parse_current_obs_dict(current_obs_buffer_dict)
-        self.obs_buf_dict = {
-            key: np.concatenate(
-                (
-                    self.obs_buf_dict[key][
-                        :, self.obs_dim_dict[key] : (self.obs_dim_dict[key] * self.history_length_dict[key])
-                    ],
-                    current_obs_dict[key],
-                ),
-                axis=1,
-            )
-            for key in self.obs_buf_dict
-        }
-        actor_obs = self.obs_buf_dict["actor_obs"].astype(np.float32)
-        # Hardcode: upper and lower body obs are the same
-        return {"actor_obs_lower_body": actor_obs, "actor_obs_upper_body": actor_obs}
-
     def policy_action(self):
         cmd_q = np.zeros(self.num_dofs)
         cmd_dq = np.zeros(self.num_dofs)

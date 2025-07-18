@@ -24,6 +24,8 @@
 - [x] Release training code
 - [x] Release sim2sim code
 - [x] Release sim2real code
+- [ ] Compatible with IsaacSim
+- [ ] Compatible with Genesis
 
 
 # Installation

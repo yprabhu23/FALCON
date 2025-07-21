@@ -23,7 +23,7 @@ class G1_29_ArmIK_NoWrists(G1_29_ArmIK):  # noqa: N801
 
         self.Unit_Test = Unit_Test
         self.Visualization = Visualization
-
+        # breakpoint()
         if not self.Unit_Test:
             self.robot = pin.RobotWrapper.BuildFromURDF(
                 robot_config["ASSET_FILE"], robot_config["ASSET_ROOT"]
@@ -311,3 +311,41 @@ class G1_29_ArmIK_NoWrists(G1_29_ArmIK):  # noqa: N801
             if current_lr_arm_motor_q is not None:
                 return current_lr_arm_motor_q[-self.nq :], np.zeros(self.nv)
             return np.zeros(self.nq), np.zeros(self.nv)
+
+
+# if __name__ == "__main__":
+#     import time
+#     from pinocchio import SE3
+
+#     # Fill in your actual URDF paths here
+#     robot_config = {
+#         "ASSET_FILE": "g1_29dof.urdf",
+#         "ASSET_ROOT": "/Users/yashprabhu/Documents/FALCON/humanoidverse/data/robots/g1",
+#     }
+
+#     ik_solver = G1_29_ArmIK_NoWrists(Unit_Test=True, Visualization=True, robot_config=robot_config)
+
+#     # Create dummy left and right targets
+#     left_target = SE3(np.eye(3), np.array([0.3, 0.4, 1.0]))
+#     right_target = SE3(np.eye(3), np.array([0.3, -0.4, 1.0]))
+
+#     # Dummy external forces (zero)
+#     EE_efrc_L = np.zeros(6)
+#     EE_efrc_R = np.zeros(6)
+
+#     # Solve and visualize
+#     q_sol, tau_ff = ik_solver.solve_ik(
+#         left_target.homogeneous,
+#         right_target.homogeneous,
+#         EE_efrc_L=EE_efrc_L,
+#         EE_efrc_R=EE_efrc_R,
+#         collision_check=False,
+#     )
+
+#     print("Joint solution:", q_sol)
+#     print("Feedforward torque:", tau_ff)
+
+#     # Keep the Meshcat viewer open
+#     print("Press Ctrl+C to exit...")
+#     while True:
+#         time.sleep(1)
